@@ -13,7 +13,7 @@ struct Person {
     var email: String
     var phone: String
     
- static func createList() -> [Person] {
+    static func createList() -> [Person] {
         var persons: [Person] = []
         
         let names = DataManager.human.names.shuffled()
@@ -21,7 +21,7 @@ struct Person {
         let emails = DataManager.human.emails.shuffled()
         let phones = DataManager.human.phones.shuffled()
         
-     for index  in 0 ... names.count - 1 {
+        for index  in 0 ... names.count - 1 {
             let human = Person (firstname: names[index],
                                 lastname: lastnames[index],
                                 email: emails[index],

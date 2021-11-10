@@ -8,6 +8,8 @@
 import UIKit
 
 class WideListViewController: UITableViewController {
+    
+    // WA:
     private var persons = Person.createList()
     //var persons: [Person] = []
     

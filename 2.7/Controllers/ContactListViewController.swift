@@ -15,29 +15,29 @@ class ContactListViewController: UITableViewController {
         
     }
     
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     guard let detailsVC = segue.destination as? DetailsViewController else { return }
-     detailsVC.user = sender as? Person ?? persons[0]
-     
-     }
-    
-    
- /*  // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
-        guard let viewControllers = tabBarController.viewControllers else { return }
-        for viewController in viewControllers {
-            if let detailsVC = segue.destination as? DetailsViewController {
-                detailsVC.user = sender as? Person ?? persons[0]
-            }
-            else if let navigationVC = viewController as? UINavigationController {
-                if let usersVC = navigationVC.topViewController as? WideListViewController {
-                    usersVC.persons = persons
-                }
-            }
-        }
+        guard let detailsVC = segue.destination as? DetailsViewController else { return }
+        detailsVC.user = sender as? Person ?? persons[0]
+        
     }
-    */
+    
+    
+    /*  // MARK: Navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     let tabBarController = segue.destination as! UITabBarController
+     guard let viewControllers = tabBarController.viewControllers else { return }
+     for viewController in viewControllers {
+     if let detailsVC = segue.destination as? DetailsViewController {
+     detailsVC.user = sender as? Person ?? persons[0]
+     }
+     else if let navigationVC = viewController as? UINavigationController {
+     if let usersVC = navigationVC.topViewController as? WideListViewController {
+     usersVC.persons = persons
+     }
+     }
+     }
+     }
+     */
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
